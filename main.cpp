@@ -40,13 +40,9 @@ public:
     void setAge(int age)
     {
         if (age >= 18)
-        {
             Age = age;
-        }
         else
-        {
             Age = 0;
-        }
     }
 
     int getAge()
@@ -71,13 +67,14 @@ public:
     void AskForPromotion()
     {
         if (Age > 30)
-        {
             std::cout << Name << " got promoted!" << std::endl;
-        }
         else
-        {
             std::cout << Name << " sorry not promoted!" << std::endl;
-        }
+    }
+
+    virtual void Work()
+    {
+        std::cout << Name << " is checking mails" << std::endl;
     }
 };
 
@@ -95,6 +92,10 @@ public:
     {
         std::cout << getName() << " Fixed bug using " << FavLang << std::endl;
     }
+    void Work()
+    {
+        std::cout << Name << " is coding" << std::endl;
+    }
 };
 
 class Teacher : public Employee
@@ -109,7 +110,12 @@ public:
     {
         Subject = subject;
     }
+    void Work()
+    {
+        std::cout << Name << " is Teching" << std::endl;
+    }
 };
+
 int main()
 {
     Employee emp = Employee("AS Gamer", "Youtube", 21);
@@ -129,4 +135,11 @@ int main()
     Teacher t = Teacher("Arun Singh", "Freelancer", 40, "History");
     t.PrepareLesson();
     t.AskForPromotion();
+
+    // Polymorphism
+    Employee* tt1 = &emp;
+    Employee* tt2 = &t;
+
+    tt1->Work();
+    tt2->Work();
 }
