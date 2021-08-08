@@ -9,14 +9,42 @@ private:
     int Age;
 
 public:
+    // setter
     void setName(string name)
     {
         Name = name;
     }
-    string getName(){
+    // getter
+    string getName()
+    {
         return Name;
     }
-    
+
+    void setCompany(string company)
+    {
+        Company = company;
+    }
+
+    string getCompany()
+    {
+        return Company;
+    }
+
+    void setAge(int age)
+    {
+        if (age >= 18)
+        {
+            Age = age;
+        }else{
+            Age = 0;
+        }
+    }
+
+    int getAge()
+    {
+        return Age;
+    }
+
     void Intro()
     {
         cout << "Name - " << Name << endl;
@@ -40,4 +68,7 @@ int main()
     emp.Intro();
     cout << "\n";
     emp1.Intro();
+
+    emp.setAge(17);
+    cout << emp.getAge();
 }
