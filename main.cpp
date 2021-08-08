@@ -3,11 +3,20 @@ using namespace std;
 
 class Employee
 {
-public:
+private:
     string Name;
     string Company;
     int Age;
 
+public:
+    void setName(string name)
+    {
+        Name = name;
+    }
+    string getName(){
+        return Name;
+    }
+    
     void Intro()
     {
         cout << "Name - " << Name << endl;
@@ -15,7 +24,8 @@ public:
         cout << "Age - " << Age << endl;
     }
 
-    Employee(string name,string company, int age){
+    Employee(string name, string company, int age)
+    {
         Name = name;
         Company = company;
         Age = age;
@@ -24,10 +34,10 @@ public:
 
 int main()
 {
-    Employee emp = Employee("Arun","Amazib",21);
-    Employee emp1("Arun","Amazon",21);
+    Employee emp = Employee("Arun", "Amazib", 21);
+    Employee emp1("Arun", "Amazon", 21);
 
     emp.Intro();
-    cout<<"\n";
+    cout << "\n";
     emp1.Intro();
 }
