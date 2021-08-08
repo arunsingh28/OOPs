@@ -1,11 +1,27 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    string name;
 
-    cout<<"Enter your name:";
-    cin>>name;
+class Employee
+{
+public:
+    string Name;
+    string Company;
+    int Age;
 
-    cout<<"Hello "<<name;
-    return 0;
+    void Intro()
+    {
+        cout << "Name - " << Name << endl;
+        cout << "Company - " << Company << endl;
+        cout << "Age - " << Age << endl;
+    }
+};
+
+int main()
+{
+    Employee emp;
+    emp.Name = "Arun";
+    emp.Company = "ASB";
+    emp.Age = 21;
+
+    emp.Intro();
 }
