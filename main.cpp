@@ -14,14 +14,20 @@ public:
         cout << "Company - " << Company << endl;
         cout << "Age - " << Age << endl;
     }
+
+    Employee(string name,string company, int age){
+        Name = name;
+        Company = company;
+        Age = age;
+    }
 };
 
 int main()
 {
-    Employee emp;
-    emp.Name = "Arun";
-    emp.Company = "ASB";
-    emp.Age = 21;
+    Employee emp = Employee("Arun","Amazib",21);
+    Employee emp1("Arun","Amazon",21);
 
     emp.Intro();
+    cout<<"\n";
+    emp1.Intro();
 }
