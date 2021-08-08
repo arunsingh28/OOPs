@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+class AbstractEmp
+{
+    virtual void AskForPromotion() = 0;
+};
+
 class Employee
 {
 private:
@@ -35,7 +40,9 @@ public:
         if (age >= 18)
         {
             Age = age;
-        }else{
+        }
+        else
+        {
             Age = 0;
         }
     }
