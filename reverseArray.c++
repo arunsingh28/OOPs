@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// revers Array
 int main(){
     int size,i;
     cout << "Enter size of array:";
